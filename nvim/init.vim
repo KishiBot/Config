@@ -1,5 +1,6 @@
 :set number
 :set shiftwidth=4
+:set tabstop=4
 :set smarttab
 :set mouse=a
 :set autoindent
@@ -18,12 +19,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
 colorscheme gruvbox
 
 nmap <F8> :TagbarToggle<CR>
+
 
 " surround keymaps
 nmap <A-[> ysiW]
@@ -34,6 +38,10 @@ nmap <A-(> ysiW)
 
 nmap <C-p> :Ag<CR>
 nmap <A-a> gcc
+
+" nerdtree binds
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " indentation keymaps
 :imap <C-j> <C-d>
@@ -55,6 +63,7 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <A-C-j> yyp
 nnoremap <A-C-k> yyP
 
+
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -65,6 +74,10 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ ]
 set hidden
+
+" Rename keymap which for some reason is Ctrl x 
+" and i'm not willing to change it at this point
+nmap <C-x> <Plug>(coc-rename)
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
