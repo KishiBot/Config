@@ -22,8 +22,17 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", {noremap=true})
 vim.keymap.set("n", "<A-C-j>", "yyp", {noremap=true})
 vim.keymap.set("n", "<A-C-k>", "yyP", {noremap=true})
 
+-- movement
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {noremap=true})
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {noremap=true})
+vim.keymap.set("n", "n", "nzzzv", {noremap=true})
+vim.keymap.set("n", "N", "Nzzzv", {noremap=true})
+
 -- copy paste remaps
 vim.keymap.set("x", "<leader>p", "\"_dp")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+y")
+
+-- Search
+vim.keymap.set("n", "<leader>/", ":noh<CR>")
