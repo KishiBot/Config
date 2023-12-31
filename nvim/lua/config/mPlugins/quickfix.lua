@@ -1,5 +1,5 @@
 vim.keymap.set("n", "<C-n>", ":cnext<CR>")
-vim.keymap.set("n", "<C-m>", ":cprev<CR>")
+vim.keymap.set("n", "<C-p>", ":cprev<CR>")
 
 function CheckQuickfix ()
     local quickfix_win_id = vim.fn.getqflist({winid = true}).winid
