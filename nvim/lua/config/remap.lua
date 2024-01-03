@@ -36,3 +36,6 @@ vim.keymap.set("n", "<leader>Y", "\"+y")
 
 -- Search
 vim.keymap.set("n", "<leader>/", ":noh<CR>")
+
+-- Visual block because fkn c-v paste
+vim.keymap.set("n", "<leader>v", "<c-v>")
