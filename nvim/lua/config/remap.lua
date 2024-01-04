@@ -37,5 +37,5 @@ vim.keymap.set("n", "<leader>Y", "\"+y")
 -- Search
 vim.keymap.set("n", "<leader>/", ":noh<CR>")
 
--- Visual block because fkn c-v paste
-vim.keymap.set("n", "<leader>v", "<c-v>")
+-- C-c to esc cause double c-c doesn't work for visual block mode
+vim.keymap.set("i", "<C-c>", "<esc>");
