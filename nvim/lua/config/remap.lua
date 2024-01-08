@@ -10,10 +10,6 @@ vim.keymap.set("n", "<C-k>", ">0")
 vim.keymap.set("v", "<C-j>", "<")
 vim.keymap.set("v", "<C-k>", ">")
 
--- select word
-vim.keymap.set("n", "gw", "vaw", {noremap=true})
-vim.keymap.set("v", "gw", "aw", {noremap=true})
-
 -- line movement
 vim.keymap.set("n", "<A-j>", "<cmd>m+1<CR>", {noremap=true})
 vim.keymap.set("n", "<A-k>", "<cmd>m-2<CR>", {noremap=true})
@@ -39,3 +35,6 @@ vim.keymap.set("n", "<leader>/", ":noh<CR>")
 
 -- C-c to esc cause double c-c doesn't work for visual block mode
 vim.keymap.set("i", "<C-c>", "<esc>");
+
+-- Remove white space at the end
+vim.keymap.set({"n", "x"}, "<leader>rs", ":s//<CR>:noh<CR>", {noremap=true, silent=true})
