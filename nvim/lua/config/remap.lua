@@ -37,4 +37,4 @@ vim.keymap.set("n", "<leader>/", ":noh<CR>")
 vim.keymap.set("i", "<C-c>", "<esc>");
 
 -- Remove white space at the end
-vim.keymap.set({"n", "x"}, "<leader>rs", ":s//<CR>:noh<CR>", {noremap=true, silent=true})
+vim.keymap.set({"n", "x"}, "<leader>rs", ":s/\\s\\+$//<CR>:noh<CR>", {noremap=true, silent=true})
