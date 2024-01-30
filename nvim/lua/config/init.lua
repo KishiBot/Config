@@ -1,5 +1,5 @@
 require("config.remap")
 require("config.lazy")
 require("config.set")
-require("config.lsp")
+-- require("config.lsp")
 require("config.mPlugins.init")
