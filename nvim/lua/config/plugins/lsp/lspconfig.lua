@@ -52,6 +52,22 @@ return {
         -- Python setup
         lspconfig.pyright.setup {
             capabilities = capabilities,
+            cmd = { "pyright-langserver", "--stdio" },
+            filetypes = { "python" },
+            settings = {
+                pyright = {
+                    autoImportCompletion = true
+                },
+                python = {
+                    analysis = {
+                        extraPaths = {".", "duh"},
+                        autoSearchPaths = true,
+                        diagnosticMode = "openFilesOnly",
+                        useLibraryCodeForTypes = true,
+                        typeCheckingMode = "off",
+                    }
+                }
+            }
         }
     end
 }

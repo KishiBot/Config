@@ -1,5 +1,9 @@
 vim.cmd[[ hi Normal guibg=NONE ctermbg=NONE ]]
 
+-- Set the conceal character to ~
+vim.o.conceallevel = 2
+vim.o.concealcursor = "nvic"
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -21,3 +25,17 @@ vim.opt.updatetime = 750
 -- Wraping
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+-- Diagnostic
+vim.diagnostic.config({
+    virtual_text = {
+        format = function ()
+            return string.format("")
+        end
+    },
+    signs = false,
+    update_in_insert = true,
+    underline = true,
+    severity_sort = false,
+    float = true
+})

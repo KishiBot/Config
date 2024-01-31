@@ -25,7 +25,7 @@ return {
             window = {
                 completion = cmp.config.window.bordered(),
                 -- documentation = {},
-            },
+        },
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(),
                 ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -34,20 +34,11 @@ return {
                 ['<C-y>'] = cmp.mapping.confirm({ select = true })
             }),
             sources = cmp.config.sources({
-                { name = 'buffer' },
                 { name = 'path' },
                 { name = 'nvim_lsp' },
+                { name = 'buffer' },
                 { name = 'luasnip' },
             })
-        })
-
-        vim.diagnostic.config({
-            virtual_text = false,
-            signs = true,
-            update_in_insert = true,
-            underline = true,
-            severity_sort = false,
-            float = true
         })
     end
 }
