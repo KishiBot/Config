@@ -49,6 +49,15 @@ return {
             },
         }
 
+        -- Java setup
+        lspconfig.jdtls.setup {
+            capabilities = capabilities,
+            filetypes = {"java"},
+            on_attach = function ()
+                require("jdtls").start_or_attach({cmd={vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls")}, })
+            end
+        }
+
         -- Python setup
         lspconfig.pyright.setup {
             capabilities = capabilities,
