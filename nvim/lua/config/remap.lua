@@ -38,3 +38,6 @@ vim.keymap.set("i", "<C-c>", "<esc>");
 
 -- Remove white space at the end
 vim.keymap.set({"n", "x"}, "<leader>rs", ":s/\\s\\+$//<CR>:noh<CR>", {noremap=true, silent=true})
+
+-- Java has shit lsp dude
+vim.keymap.set("n", "<leader>java", function() require("jdtls").start_or_attach({cmd={"jdtls"}}) end)
