@@ -3,7 +3,15 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/coding/c/ ~/coding/cpp/ ~/coding/python/ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find \
+    ~/coding/c/ \
+    ~/coding/cpp/ \
+    ~/coding/python/ \
+    ~/coding/java/ \
+    ~/coding/rust/ \
+    ~/coding/odin/ \
+    ~/.config/nvim/lua/ \
+    -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

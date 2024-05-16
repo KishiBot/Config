@@ -48,26 +48,49 @@ return {
                 }
             },
         }
+        lspconfig.rust_analyzer.setup {
+            filetypes = { "rust" },
+            cmd = { "rustup", "run", "stable", "rust-analyzer" },
+        }
+
 
         -- Python setup
-        lspconfig.pyright.setup {
+        -- lspconfig.pyright.setup {
+        --     capabilities = capabilities,
+        --     cmd = { "pyright-langserver", "--stdio" },
+        --     filetypes = { "python" },
+        --     settings = {
+        --         pyright = {
+        --             autoImportCompletion = true
+        --         },
+        --         python = {
+        --             analysis = {
+        --                 extraPaths = {".", "duh"},
+        --                 autoSearchPaths = true,
+        --                 diagnosticMode = "openFilesOnly",
+        --                 useLibraryCodeForTypes = true,
+        --                 typeCheckingMode = "off",
+        --         }
+        --         }
+        --     }
+        -- }
+        -- lspconfig.pylsp.setup {
+        --     capabilities = capabilities,
+        --     filetypes = {"python"},
+        --     settings = {
+        --         pylsp = {
+        --             plugins = {
+        --                 pycodestyle = {
+        --                     ignore = {'W391'},
+        --                     maxLineLength = 100
+        --                 }
+        --             }
+        --         }
+        --     }
+        -- }
+        lspconfig.jedi_language_server.setup {
             capabilities = capabilities,
-            cmd = { "pyright-langserver", "--stdio" },
-            filetypes = { "python" },
-            settings = {
-                pyright = {
-                    autoImportCompletion = true
-                },
-                python = {
-                    analysis = {
-                        extraPaths = {".", "duh"},
-                        autoSearchPaths = true,
-                        diagnosticMode = "openFilesOnly",
-                        useLibraryCodeForTypes = true,
-                        typeCheckingMode = "off",
-                    }
-                }
-            }
+
         }
     end
 }

@@ -17,14 +17,32 @@ return {
             }
         })
 
-        mason_config.setup {
+        mason_config.setup ({
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
                 "clangd",
+                "pylsp",
                 "pyright"
             },
             automatic_installation = true,
-        }
+            handlers = {
+                function (server_name)
+                    require("lspconfig")[server_name].setup {}
+                end
+            }
+            -- handlers = {
+            --     lspconfig.rust_analyzer.setup {
+            --         capabilities = capabilities,
+            --         settings = {
+            --             ['rust-analyzer'] = {
+            --                 diagnostics = {
+            --                     enable = false;
+            --                 }
+            --             }
+            --         }
+            --     }
+            -- }
+        })
     end
 }
