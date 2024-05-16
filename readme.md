@@ -1,5 +1,4 @@
 # Just my personal linux config.
-If you got this link from me feel free to use it.<br>
-Though i **wouldn't** really recommend it as it is my personal project and is probably **really bad**.
+Feel free to use this config though be careful as it is by no means a good one. But it does work... *sometimes*
 
 To use .tmux.conf move the file from ./tmux to ~/
