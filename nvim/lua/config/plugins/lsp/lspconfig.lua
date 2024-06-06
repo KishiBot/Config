@@ -92,5 +92,9 @@ return {
             capabilities = capabilities,
 
         }
+
+        lspconfig.glsl_analyzer.setup {
+            capabilities = capabilities,
+        }
     end
 }

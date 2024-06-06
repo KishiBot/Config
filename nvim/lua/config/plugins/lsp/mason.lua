@@ -24,7 +24,7 @@ return {
                 "clangd",
                 "pylsp",
                 "pyright",
-                "glslls"
+                "glsl_analyzer"
             },
             automatic_installation = true,
             handlers = {
