@@ -23,7 +23,8 @@ return {
                 "rust_analyzer",
                 "clangd",
                 "pylsp",
-                "pyright"
+                "pyright",
+                "glslls"
             },
             automatic_installation = true,
             handlers = {
