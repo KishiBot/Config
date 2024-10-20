@@ -23,8 +23,8 @@ return {
                 "rust_analyzer",
                 "clangd",
                 "pylsp",
-                "pyright",
-                "glsl_analyzer"
+                "glsl_analyzer",
+                "gopls"
             },
             automatic_installation = true,
             handlers = {
